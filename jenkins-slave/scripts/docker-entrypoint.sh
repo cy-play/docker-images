@@ -1,10 +1,10 @@
-#!/bin/env bash
+#!/bin/sh
 
 echo "Running MongoDB"
 /root/scripts/run_mongo.sh mongod &
 
 echo "Running PostgreSQL"
-/root/scripts/run_postgres.sh postgres &
+/run_postgres.sh postgres &
 
 echo "Running Jenkins Slave"
-/root/scripts/run_slave.sh 
+jenkins-slave -url http://jenkins-server:port <secret> <agent name>
