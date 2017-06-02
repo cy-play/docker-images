@@ -107,4 +107,6 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+RUN pip install virtualenv
+
 USER jenkins
