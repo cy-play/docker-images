@@ -107,6 +107,6 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-RUN pip install virtualenv
+RUN pip install virtualenv && apk --update add libpq postgresql postgresql-client postgresql-libs postgresql-dev
 
 USER jenkins
